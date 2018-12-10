@@ -1,0 +1,27 @@
+Os dados de conexão do banco estão no arquivo starwars\src\main\resources\application.properties 
+
+
+Inicializar o servidor no diretorio root do projeto;
+mvn spring-boot:run
+------------------------------
+Utilizar o PostMan para os testes
+
+Obter todos os planetas
+GET http://localhost:8080/planeta/getAll/
+
+Obter Planeta por id
+GET http://localhost:8080/planeta/findById/5c0b24a06726d12bf44edba3
+
+Obter lista de Planetas por Nome
+GET http://localhost:8080/planeta/findByName/Venus
+
+Criar planeta
+POST http://localhost:8080/planeta/create/ 
+	{
+        "nome": "Urano",
+        "clima": "bom",
+        "terreno": "gasoso"
+    }
+	
+Deletar Planeta por Id
+DELETE http://localhost:8080/planeta/delete/5c0b1a916726d12918a57b28
